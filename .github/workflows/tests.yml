@@ -44,7 +44,9 @@ jobs:
           coverage: none
 
       - name: Select Laravel version
-        run: composer require --dev laravel/framework:${{ matrix.laravel }} orchestra/testbench:${{ matrix.testbench }} --no-update
+        run: |
+          composer config policy.advisories.block false
+          composer require --dev laravel/framework:${{ matrix.laravel }} orchestra/testbench:${{ matrix.testbench }} --no-update
 
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction --no-progress

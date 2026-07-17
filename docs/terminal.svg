@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690">
+  <rect width="1120" height="690" rx="18" fill="#0d1117"/>
+  <path d="M18 0h1084a18 18 0 0 1 18 18v48H0V18A18 18 0 0 1 18 0Z" fill="#161b22"/>
+  <circle cx="34" cy="33" r="8" fill="#ff5f56"/>
+  <circle cx="60" cy="33" r="8" fill="#ffbd2e"/>
+  <circle cx="86" cy="33" r="8" fill="#27c93f"/>
+  <text x="560" y="40" text-anchor="middle" fill="#8b949e" font-family="Menlo, monospace" font-size="16">laravel-doctor</text>
+
+  <g font-family="Menlo, monospace" font-size="21">
+    <text x="38" y="112" fill="#7ee787">$</text>
+    <text x="66" y="112" fill="#e6edf3">php artisan doctor</text>
+
+    <text x="38" y="174" fill="#58a6ff" font-weight="bold">INFO</text>
+    <text x="105" y="174" fill="#e6edf3" font-weight="bold">Laravel Doctor.</text>
+
+    <text x="52" y="234" fill="#d29922">!</text>
+    <text x="86" y="234" fill="#e6edf3" font-weight="bold">APP_DEBUG</text>
+    <text x="280" y="234" fill="#8b949e">Enabled outside production.</text>
+
+    <text x="52" y="280" fill="#3fb950">✓</text>
+    <text x="86" y="280" fill="#e6edf3" font-weight="bold">APP_ENV</text>
+    <text x="280" y="280" fill="#8b949e">Set to local.</text>
+
+    <text x="52" y="326" fill="#3fb950">✓</text>
+    <text x="86" y="326" fill="#e6edf3" font-weight="bold">Queue</text>
+    <text x="280" y="326" fill="#8b949e">Using the database connection.</text>
+
+    <text x="52" y="372" fill="#3fb950">✓</text>
+    <text x="86" y="372" fill="#e6edf3" font-weight="bold">Cache</text>
+    <text x="280" y="372" fill="#8b949e">Using the database store.</text>
+
+    <text x="52" y="418" fill="#d29922">!</text>
+    <text x="86" y="418" fill="#e6edf3" font-weight="bold">Config cache</text>
+    <text x="280" y="418" fill="#8b949e">Configuration is not cached.</text>
+
+    <text x="52" y="464" fill="#d29922">!</text>
+    <text x="86" y="464" fill="#e6edf3" font-weight="bold">Route cache</text>
+    <text x="280" y="464" fill="#8b949e">Routes are not cached.</text>
+
+    <text x="52" y="510" fill="#3fb950">✓</text>
+    <text x="86" y="510" fill="#e6edf3" font-weight="bold">OPcache</text>
+    <text x="280" y="510" fill="#8b949e">Enabled.</text>
+
+    <text x="52" y="582" fill="#e6edf3" font-weight="bold">Score</text>
+    <text x="140" y="582" fill="#d29922" font-weight="bold">79/100</text>
+  </g>
+</svg>

@@ -2,6 +2,8 @@
 
 A small, zero-dependency health report for Laravel applications.
 
+![Laravel Doctor terminal report](docs/terminal.png)
+
 ```text
 Laravel Doctor
 

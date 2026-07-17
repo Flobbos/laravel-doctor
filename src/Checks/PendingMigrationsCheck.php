@@ -2,28 +2,30 @@
 
 namespace LaravelDoctor\Checks;
 
-use Illuminate\Database\Migrations\Migrator;
+use Illuminate\Contracts\Container\Container;
 use LaravelDoctor\Contracts\Check;
 use LaravelDoctor\ValueObjects\CheckResult;
 use Throwable;
 
 final readonly class PendingMigrationsCheck implements Check
 {
-    public function __construct(private Migrator $migrator) {}
+    public function __construct(private Container $container) {}
 
     public function run(): CheckResult
     {
         try {
-            if (! $this->migrator->repositoryExists()) {
+            $migrator = $this->container->make('migrator');
+
+            if (! $migrator->repositoryExists()) {
                 return CheckResult::warning('Migrations', 'Migration table does not exist.');
             }
 
             $paths = array_unique([
                 database_path('migrations'),
-                ...$this->migrator->paths(),
+                ...$migrator->paths(),
             ]);
-            $files = $this->migrator->getMigrationFiles($paths);
-            $pending = array_diff(array_keys($files), $this->migrator->getRepository()->getRan());
+            $files = $migrator->getMigrationFiles($paths);
+            $pending = array_diff(array_keys($files), $migrator->getRepository()->getRan());
 
             return $pending === []
                 ? CheckResult::pass('Migrations', 'No pending migrations.')

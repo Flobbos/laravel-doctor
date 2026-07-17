@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690">
-  <rect width="1120" height="690" rx="18" fill="#0d1117"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="780" viewBox="0 0 1120 780">
+  <rect width="1120" height="780" rx="18" fill="#0d1117"/>
   <path d="M18 0h1084a18 18 0 0 1 18 18v48H0V18A18 18 0 0 1 18 0Z" fill="#161b22"/>
   <circle cx="34" cy="33" r="8" fill="#ff5f56"/>
   <circle cx="60" cy="33" r="8" fill="#ffbd2e"/>
@@ -41,7 +41,15 @@
     <text x="86" y="510" fill="#e6edf3" font-weight="bold">OPcache</text>
     <text x="280" y="510" fill="#8b949e">Enabled.</text>
 
-    <text x="52" y="582" fill="#e6edf3" font-weight="bold">Score</text>
-    <text x="140" y="582" fill="#d29922" font-weight="bold">79/100</text>
+    <text x="52" y="556" fill="#3fb950">✓</text>
+    <text x="86" y="556" fill="#e6edf3" font-weight="bold">Database</text>
+    <text x="280" y="556" fill="#8b949e">Connected via testing.</text>
+
+    <text x="52" y="602" fill="#d29922">!</text>
+    <text x="86" y="602" fill="#e6edf3" font-weight="bold">Migrations</text>
+    <text x="280" y="602" fill="#8b949e">Migration table does not exist.</text>
+
+    <text x="52" y="674" fill="#e6edf3" font-weight="bold">Score</text>
+    <text x="140" y="674" fill="#d29922" font-weight="bold">75/100</text>
   </g>
 </svg>

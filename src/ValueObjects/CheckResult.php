@@ -10,6 +10,7 @@ final readonly class CheckResult
         public string $name,
         public CheckStatus $status,
         public string $message,
+        public int $weight = 1,
     ) {}
 
     public static function pass(string $name, string $message): self
@@ -25,5 +26,10 @@ final readonly class CheckResult
     public static function warning(string $name, string $message): self
     {
         return new self($name, CheckStatus::Warning, $message);
+    }
+
+    public function withWeight(int $weight): self
+    {
+        return new self($this->name, $this->status, $this->message, $weight);
     }
 }

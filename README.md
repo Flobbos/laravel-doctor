@@ -14,8 +14,10 @@ Laravel Doctor
   ✓ Config cache Configuration is cached.
   ! Route cache  Routes are not cached.
   ✓ OPcache      Enabled.
+  ✓ Database     Connected via mysql.
+  ✓ Migrations   No pending migrations.
 
-  Score  93/100
+  Score  96/100
 ```
 
 ## Requirements
@@ -34,6 +36,16 @@ Laravel discovers the service provider automatically. Run the report with:
 ```bash
 php artisan doctor
 ```
+
+Use it in CI or deployments:
+
+```bash
+php artisan doctor --ci
+php artisan doctor --minimum=80
+php artisan doctor --json
+```
+
+`--ci` returns a non-zero exit code when a check fails. `--minimum` enforces a score from 0 to 100. `--json` returns the same report in a machine-readable format.
 
 Publish the configuration when you want to customize the checks:
 
@@ -59,6 +71,17 @@ final class DatabaseCheck implements Check
 ```
 
 The container resolves every check, so constructor injection works as expected. Results can be `pass`, `warning`, or `fail`. Passes earn full score, warnings half score, and failures no score.
+
+## Scoring weights
+
+Published configuration includes a `weights` array keyed by check class. Increase a value when that check should contribute more heavily to the score:
+
+```php
+'weights' => [
+    AppDebugCheck::class => 2,
+    DatabaseConnectionCheck::class => 3,
+],
+```
 
 ## Development
 

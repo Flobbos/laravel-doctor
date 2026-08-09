@@ -1,6 +1,6 @@
 {
     "name": "flobbos/laravel-doctor",
-    "description": "A small, shareable health report for Laravel applications.",
+    "description": "A lightweight Laravel health score for CI and production readiness.",
     "keywords": ["laravel", "health", "diagnostics", "artisan"],
     "license": "MIT",
     "type": "library",

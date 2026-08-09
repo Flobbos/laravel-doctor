@@ -1,6 +1,8 @@
 # Laravel Doctor
 
-A small, zero-dependency health report for Laravel applications.
+A lightweight Laravel health score for CI and production readiness.
+
+Looking for a comprehensive diagnostics and auto-repair suite? Use the official [Laravel Doctor](https://github.com/laravel/doctor). This package intentionally stays focused on a compact, weighted score that is easy to read, share, and enforce in CI.
 
 ![Laravel Doctor terminal report](docs/terminal.png)
 
